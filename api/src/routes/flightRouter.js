@@ -1,13 +1,11 @@
 const { Router } = require('express')
+const postSeatHandler = require('../handlers/postSeatHandler')
+const getFlightHandler = require('../handlers/getFlightHandler')
 
 const flightRouter = Router()
 
-flightRouter.get('/seat/:id', (req, res)=>{
-    res.status(200).send('NIY: ESTA RUTA TRAE LA INFORMACION DE LOS ASIENTOS');
-})
+flightRouter.post('/seat', postSeatHandler)
 
-flightRouter.get('/flights/:id/passengers', (req, res)=>{
-    res.status(200).send('NIY: ESTA RUTA TRAE LA INFORMACION DE LOS PASAJEROS');
-});
+flightRouter.get('/flights/:id/passengers', getFlightHandler);
 
 module.exports = flightRouter

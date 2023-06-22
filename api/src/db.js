@@ -3,7 +3,6 @@ require('dotenv').config();
 
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
-
 const sequelize = new Sequelize('airline', DB_USER, DB_PASSWORD, {
     host: DB_HOST,
     dialect: 'mysql',
@@ -33,4 +32,4 @@ async function connectDatabase() {
     res.status(response.code).json(response);
   });
 
-  module.exports = { sequelize }
+  module.exports = sequelize

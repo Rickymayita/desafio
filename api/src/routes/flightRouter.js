@@ -1,10 +1,10 @@
 const { Router } = require('express')
-const postSeatHandler = require('../handlers/postSeatHandler')
+const getSeatHandler = require('../handlers/getSeatHandler')
 const getFlightHandler = require('../handlers/getFlightHandler')
 
 const flightRouter = Router()
 
-flightRouter.post('/seat', postSeatHandler)
+flightRouter.get('/seat/:id', getSeatHandler)
 
 flightRouter.get('/flights/:id/passengers', getFlightHandler);
 

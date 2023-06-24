@@ -17,4 +17,9 @@ const getSeat = async (seatId) => {
   }
 };
 
+const passengerWithGroup = (passengers) =>{
+  const group = passengers.filter((passenger)=> passenger.seatId !== null)
+  console.log(group);
+}
+
 module.exports = getSeat;

@@ -41,6 +41,7 @@ const getFlightData = async (flightId) => {
       airplaneId: flight[0].airplane_id,
       passengers: passengers,
     };
+    
     return response;
   } catch (error) {
     console.error("Error al ejecutar la consulta:", error);
